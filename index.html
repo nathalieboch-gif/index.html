@@ -2,15 +2,15 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <titre>Nathalie Boch | Feldenkrais</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href=" https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap " rel="stylesheet">
 <style>
 :racine {
 --bg: #fdfaf6;
 --accent: #8ba88e;
 --texte : #4a4a4a ;
---verre : rgba(255, 255, 255, 0,85) ;
+--verre : rgba(255, 255, 255, 0,9) ;
 --border: rgba(139, 168, 142, 0.2);
 }
 
@@ -47,9 +47,11 @@ marge intérieure : 50 px ;
 affichage : flexible ;
 écart : 40 px ;
 box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+position : relative ;
+débordement : caché ;
 }
 
-.left-panel { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.left-panel { flex: 1; display: flex; flex-direction: column; justify-content: center; z-index: 2; }
 
 .profile-title {
 police-family: 'Playfair Display', serif;
@@ -79,7 +81,7 @@ text-decoration: aucune;
 taille de police : 15 px ;
 police-weight: 600;
 curseur : pointeur ;
-transition : toutes les 0,4 s ;
+transition : 0,4 s ;
 affichage : flexible ;
 justificatif-contenu : espace-entre ;
 aligner les éléments : centrer ;
@@ -99,31 +101,34 @@ aligner les éléments : centrer ;
 text-align: centre;
 hauteur minimale : 380 px ;
 position : relative ;
+z-index: 2;
 }
 
 .logo-filigrane {
 position : absolue ;
-largeur : 80 % ;
-opacité : 0,15 ;
-z-index : -1 ;
+largeur : 100 % ;
+hauteur : 100 % ;
+haut : 0 ;
+gauche : 0 ;
+affichage : flexible ;
+justifier-contenu : centre ;
+aligner les éléments : centrer ;
+z-index : 1 ;
+opacité : 0,12 ;
 événements de pointeur : aucun ;
 }
 
-.info-box { largeur: 100%; affichage: aucun; }
+.logo-watermark img {
+largeur maximale : 80 % ;
+hauteur maximale : 80 % ;
+objet-fit : contient ;
+}
+
+.info-box { largeur: 100%; affichage: aucun; position: relative; z-index: 3; }
 .info-box.active { display: block; }
 
-.info-title {
-police-family: 'Playfair Display', serif;
-taille de police : 30px ;
-marge inférieure : 25px ;
-}
-
-.info-desc {
-taille de police : 17 px ;
-hauteur de ligne : 1,8 ;
-opacité : 0,85 ;
-marge inférieure : 40px ;
-}
+.info-title { font-family: 'Playfair Display', serif; font-size: 30px; margin-bottom: 25px; }
+.info-desc { font-size: 17px; line-height: 1.8; opacity: 0.85; margin-bottom: 40px; }
 
 .cta-main {
 affichage : bloc en ligne ;
@@ -138,9 +143,10 @@ curseur : pointeur ;
 
 @media (max-width: 768px) {
 corps { débordement-y: auto; alignement-éléments: flex-start; }
-.container { flex-direction: column; padding: 45px 25px; border-radius: 40px; }
-.right-panel { border-left: none; border-top: 1px solid var(--border); padding-top: 40px; min-height: auto; }
+.container { flex-direction: column; padding: 45px 25px; border-radius: 40px; margin-top: 10px; }
+.right-panel { border-left: none; border-top: 1px solid var(--border); padding: 40px 0 0 0; min-height: auto; }
 .left-panel { text-align: center; }
+.logo-watermark { hauteur: 300px; position: relative; marge-bas: -150px; opacité: 0.1; }
 }
 </style>
 </head>
@@ -149,6 +155,10 @@ corps { débordement-y: auto; alignement-éléments: flex-start; }
 <div class="bg-gradient"></div>
 
 <div class="container">
+<div class="logo-watermark">
+<img src="logo-zen.png" alt="">
+</div>
+
 <div class="left-panel">
 <h1 class="profile-title">Nathalie Boch</h1>
 <p class="tagline">Praticienne Certifiée</p>
@@ -162,8 +172,6 @@ corps { débordement-y: auto; alignement-éléments: flex-start; }
 </div>
 
 <div class="right-panel">
-<img src="logo-zen.png" class="logo-watermark" alt="">
-
 <div id="call" class="info-box active">
 <h2 class="info-title">Séance Individuelle</h2>
 <p class="info-desc">Retrouvez l'aisance et la fluidité. Nathalie vous accompagne pour libérer vos tensions par le mouvement conscient.</p>
@@ -208,7 +216,9 @@ const url = window.URL.createObjectURL(blob);
 const lien = document.createElement('a');
 lien.href = url;
 lien.download = 'Nathalie_Boch.vcf';
+document.body.appendChild(lien);
 lien.cliquer();
+document.body.removeChild(lien);
 }
 </script>
 </body>
