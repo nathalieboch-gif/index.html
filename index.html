@@ -1,225 +1,247 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Nathalie Boch | Feldenkrais</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #fdfaf6;
-      --accent: #8ba88e; /* Vert sauge doux */
-      --text: #4a4a4a;
-      --glass: rgba(255, 255, 255, 0.6);
-      --border: rgba(139, 168, 142, 0.2);
-    }
+<meta charset="UTF-8">
+<titre>Nathalie Boch | Feldenkrais</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href=" https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap " rel="stylesheet">
+<style>
+:racine {
+--bg: #fdfaf6;
+--accent : #8ba88e ; /* Vert sauge doux */
+--texte : #4a4a4a ;
+--verre : rgba(255, 255, 255, 0,75) ;
+--border: rgba(139, 168, 142, 0.2);
+}
 
-    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-   
-    body {
-      min-height: 100vh;
-      background: var(--bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Quicksand', sans-serif;
-      color: var(--text);
-      padding: 20px;
-    }
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
-    /* FOND ZEN */
-    .bg-gradient {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: radial-gradient(circle at 20% 30%, #e8f0e9 0%, transparent 40%),
-                  radial-gradient(circle at 80% 70%, #f5ece1 0%, transparent 40%);
-      z-index: -1;
-    }
+corps {
+hauteur minimale : 100vh ;
+arrière-plan : var(--bg);
+affichage : flexible ;
+aligner les éléments : centrer ;
+justifier-contenu : centre ;
+police de caractères : 'Quicksand', sans-serif ;
+couleur : var(--texte);
+marge intérieure : 20px ;
+}
 
-    .container {
-      width: 100%;
-      max-width: 900px;
-      background: var(--glass);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      padding: 50px;
-      display: flex;
-      gap: 40px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.05);
-      animation: fadeIn 1s ease-out;
-    }
+/* FOND ZEN */
+.bg-gradient {
+position : fixe ;
+haut : 0 ; gauche : 0 ; largeur : 100 % ; hauteur : 100 % ;
+arrière-plan : dégradé radial (cercle à 20 % 30 %, #e8f0e9 0 %, transparent 40 %),
+radial-gradient(cercle à 80% 70%, #f5ece1 0%, transparent 40%);
+z-index : -1 ;
+}
 
-    /* GAUCHE */
-    .left-panel { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-   
-    .profile-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      color: var(--accent);
-      margin-bottom: 5px;
-    }
+.conteneur {
+largeur : 100 % ;
+largeur maximale : 950 px ;
+arrière-plan : var(--verre);
+filtre de fond : flou (20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid var(--border);
+bordure-radius: 50px;
+marge intérieure : 50 px ;
+affichage : flexible ;
+écart : 40 px ;
+box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+animation : fondu en entrée 1s, fondu en sortie ;
+}
 
-    .tagline {
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      opacity: 0.7;
-      margin-bottom: 35px;
-      font-weight: 700;
-    }
+/* GAUCHE - NAVIGATION */
+.left-panel { flex: 1; display: flex; flex-direction: column; justify-content: center; }
 
-    .nav-links { display: flex; flex-direction: column; gap: 15px; }
+.profile-title {
+police-family: 'Playfair Display', serif;
+taille de police : 36 px ;
+couleur : var(--accent);
+marge inférieure : 5 px ;
+}
 
-    .btn {
-      padding: 18px 25px;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      color: var(--text);
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-    }
+.tagline {
+taille de police : 13 px ;
+espacement des lettres : 3 px ;
+text-transform: uppercase;
+opacité : 0,8 ;
+marge inférieure : 40px ;
+police-weight: 700;
+}
 
-    .btn:hover { border-color: var(--accent); transform: scale(1.02); }
-    .btn:active { transform: scale(0.98); }
-    .btn-call { background: var(--accent) !important; color: #fff !important; border: none; }
+.nav-links { display: flex; flex-direction: column; gap: 16px; }
 
-    /* DROITE */
-    .right-panel {
-      flex: 1.2;
-      border-left: 1px solid var(--border);
-      padding-left: 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      min-height: 350px;
-    }
+.btn {
+marge intérieure : 20px 25px ;
+arrière-plan : #fff;
+border: 1px solid var(--border);
+bordure-radius: 35px;
+couleur : var(--texte);
+text-decoration: aucune;
+taille de police : 15 px ;
+police-weight: 600;
+curseur : pointeur ;
+transition : tous les 0,4s cubic-bezier(0,175, 0,885, 0,32, 1,275);
+affichage : flexible ;
+justificatif-contenu : espace-entre ;
+aligner les éléments : centrer ;
+}
 
-    .info-box { width: 100%; display: none; animation: slideUp 0.5s forwards; }
-    .info-box.active { display: block; }
+.btn:hover { border-color: var(--accent); transform: translateX(10px); background: #fcfdfc; }
+.btn:active { transform: scale(0.96); }
+.btn-call { background: var(--accent) !important; color: #fff !important; border: none; box-shadow: 0 10px 20px rgba(139, 168, 142, 0.2); }
 
-    .info-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
+/* DROITE - CONTENU AVEC LOGO FILIGRANE */
+.panneau-droit {
+flex : 1,3 ;
+bordure-gauche : 1px solide var(--border);
+marge intérieure gauche : 45px ;
+affichage : flexible ;
+direction flexible : colonne ;
+justifier-contenu : centre ;
+aligner les éléments : centrer ;
+text-align: centre;
+hauteur minimale : 380 px ;
+position : relative ;
+}
 
-    .info-desc { font-size: 16px; line-height: 1.8; opacity: 0.8; margin-bottom: 35px; }
+/* LOGO EN FOND DERRIÈRE LE TEXTE */
+.logo-filigrane {
+position : absolue ;
+largeur : 80 % ;
+opacité : 0,15 ; /* Très discret pour laisser lire le texte */
+z-index : -1 ;
+événements de pointeur : aucun ;
+}
 
-    .cta-main {
-      display: inline-block;
-      padding: 16px 40px;
-      background: var(--text);
-      color: #fff;
-      border-radius: 30px;
-      font-weight: 500;
-      text-decoration: none;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.info-box { largeur: 100%; affichage: aucun; animation: slideUp 0.6s ease-out forwards; }
+.info-box.active { display: block; }
 
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes slideUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+.info-title {
+police-family: 'Playfair Display', serif;
+taille de police : 30px ;
+marge inférieure : 25px ;
+couleur : var(--texte);
+}
 
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .container { flex-direction: column; padding: 40px 25px; border-radius: 40px; }
-      .right-panel { border-left: none; border-top: 1px solid var(--border); padding: 35px 0 0 0; min-height: auto; }
-      .left-panel { text-align: center; }
-      .profile-title { font-size: 28px; }
-    }
-  </style>
+.info-desc {
+taille de police : 17 px ;
+hauteur de ligne : 1,8 ;
+opacité : 0,85 ;
+marge inférieure : 40px ;
+largeur maximale : 420 px ;
+}
+
+.cta-main {
+affichage : bloc en ligne ;
+marge intérieure : 18px 45px ;
+arrière-plan : var(--texte);
+couleur : #fff ;
+bordure-radius: 35px;
+police-weight: 600;
+text-decoration: aucune;
+curseur : pointeur ;
+transition : 0,3 s ;
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.cta-main:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(0,0,0,0.15); }
+
+@keyframes fadeIn { de { opacité: 0; } à { opacité: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* MOBILE */
+@media (max-width: 768px) {
+corps { débordement-y: auto; alignement-éléments: flex-start; }
+.container { flex-direction: column; padding: 45px 25px; border-radius: 40px; margin-top: 10px; }
+.right-panel { border-left: none; border-top: 1px solid var(--border); padding: 40px 0 0 0; min-height: auto; }
+.left-panel { text-align: center; }
+.profile-title { font-size: 30px; }
+.logo-watermark { largeur: 60%; haut: 50%; transformation: translateY(-50%); }
+}
+</style>
 </head>
-<body>
+<corps>
 
-  <div class="bg-gradient"></div>
+<div class="bg-gradient"></div>
 
-  <div class="container">
-    <div class="left-panel">
-      <div>
-        <h1 class="profile-title">Nathalie Boch</h1>
-        <p class="tagline">Praticienne Certifiée</p>
-      </div>
-     
-      <div class="nav-links">
-        <div class="btn btn-call" onclick="makeCall()">Prendre rendez-vous <span>🌿</span></div>
-        <div class="btn" onclick="openTab('felden')">La Méthode <span>✨</span></div>
-        <div class="btn" onclick="openTab('vcard')">Ajouter au répertoire <span>📱</span></div>
-        <div class="btn" onclick="openTab('contact')">Écrire un Email <span>✉️</span></div>
-      </div>
-    </div>
+<div class="container">
+<div class="left-panel">
+<div>
+<h1 class="profile-title">Nathalie Boch</h1>
+<p class="tagline">Praticienne Certifiée</p>
+</div>
 
-    <div class="right-panel">
-      <div id="call" class="info-box active">
-        <h2 class="info-title">Séance Individuelle</h2>
-        <p class="info-desc">Redécouvrez le plaisir de bouger sans effort. Nathalie vous accompagne vers une meilleure conscience corporelle.</p>
-        <a href="tel:+33629131745" class="cta-main">Appeler le 06 29 13 17 45</a>
-      </div>
+<div class="nav-links">
+<div class="btn btn-call" onclick="makeCall()">Prendre rendez-vous <span>🌿</span></div>
+<div class="btn" onclick="openTab('felden')">La Méthode <span>✨</span></div>
+<div class="btn" onclick="openTab('vcard')">Enregistrer le contact <span>📱</span></div>
+<div class="btn" onclick="openTab('contact')">Envoyer un Email <span>✉️</span></div>
+</div>
+</div>
 
-      <div id="felden" class="info-box">
-        <h2 class="info-title">Le Feldenkrais</h2>
-        <p class="info-desc">Une approche douce pour libérer les tensions, améliorer la posture et retrouver une fluidité durable dans vos gestes quotidiens.</p>
-        <div class="cta-main" onclick="makeCall()">S'informer</div>
-      </div>
+<div class="right-panel">
+<img src="logo-zen.png" class="logo-watermark" alt="">
 
-      <div id="vcard" class="info-box">
-        <h2 class="info-title">Contact</h2>
-        <p class="info-desc">Enregistrez mes coordonnées directement dans votre téléphone pour faciliter nos échanges.</p>
-        <div class="cta-main" onclick="downloadVCard()">M'enregistrer</div>
-      </div>
+<div id="call" class="info-box active">
+<h2 class="info-title">Séance Individuelle</h2>
+<p class="info-desc">Retrouvez l'aisance et la fluidité. Nathalie vous accompagne pour libérer vos tensions par le mouvement conscient.</p>
+<a href="tel:+33629131745" class="cta-main">Appeler le 06 29 13 17 45</a>
+</div>
 
-      <div id="contact" class="info-box">
-        <h2 class="info-title">Contact Email</h2>
-        <p class="info-desc">Une question sur les cours collectifs ou individuels ? N'hésitez pas à m'envoyer un message.</p>
-        <a href="mailto:nathalieboch066@gmail.com" class="cta-main">Envoyer un mail</a>
-      </div>
-    </div>
-  </div>
+<div id="felden" class="info-box">
+<h2 class="info-title">Le Feldenkrais</h2>
+<p class="info-desc">Une pédagogie innovante qui utilise des mouvements doux pour rééduquer le système nerveux et diminuer les douleurs.</p>
+<div class="cta-main" onclick="makeCall()">En savoir plus</div>
+</div>
 
-  <script>
-    function openTab(id) {
-      document.querySelectorAll('.info-box').forEach(b => b.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
+<div id="vcard" class="info-box">
+<h2 class="info-title">Mon Téléphone</h2>
+<p class="info-desc">Ajoutez-moi à vos contacts pour retrouver facilement mes coordonnées sur votre téléphone.</p>
+<div class="cta-main" onclick="downloadVCard()">M'enregistrer</div>
+</div>
 
-    function makeCall() {
-      openTab('call');
-      window.location.href = "tel:+33629131745";
-    }
+<div id="contact" class="info-box">
+<h2 class="info-title">Écrire un message</h2>
+<p class="info-desc">Pour toute question sur les ateliers ou les séances individuelles, je vous répondrai avec plaisir.</p>
+<a href="mailto: nathalieboch066@gmail.com " class="cta-main"> Envoyer un mail</a>
+</div>
+</div>
+</div>
 
-    function downloadVCard() {
-      const vcardData = [
-        "BEGIN:VCARD",
-        "VERSION:3.0",
-        "FN:Nathalie BOCH",
-        "ORG:Feldenkrais Praticienne;",
-        "TEL;TYPE=CELL,VOICE:+33629131745",
-        "EMAIL:nathalieboch066@gmail.com",
-        "END:VCARD"
-      ].join("\n");
-     
-      const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8' });
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', 'Nathalie_Boch.vcf');
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-  </script>
+<script>
+fonction ouvrirTab(id) {
+document.querySelectorAll('.info-box').forEach(b => b.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+
+fonction makeCall() {
+ouvrirTab('appel');
+window.location.href = "tel:+33629131745";
+}
+
+fonction téléchargerVCard() {
+const vcardData = [
+"DÉBUT : VCARD",
+"VERSION : 3.0",
+"FN:Nathalie BOCH",
+"ORG:Praticienne Feldenkrais;",
+"TÉL;TYPE=CELL,VOIX:+33629131745",
+" ADRESSE E-MAIL : nathalieboch066@gmail.com ",
+"FIN : VCARD"
+].join("\n");
+
+const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8' });
+const url = window.URL.createObjectURL(blob);
+const lien = document.createElement('a');
+lien.href = url;
+lien.setAttribute('téléchargement', 'Nathalie_Boch.vcf');
+document.body.appendChild(lien);
+lien.cliquer();
+document.body.removeChild(lien);
+}
+</script>
 
 </body>
 </html>
